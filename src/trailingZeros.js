@@ -8,6 +8,8 @@
  * @return: An integer, denote the number of trailing zeros in n!
  */
 
-const trailingZeros = function(n) {
+trailingZeros = n => {
   return n ? Math.floor(n / 5) + trailingZeros(Math.floor(n / 5)) : 0;
 };
+
+console.log(trailingZeros(11));

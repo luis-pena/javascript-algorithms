@@ -12,6 +12,11 @@
  * @param B: sorted integer array B
  * @return: A new sorted integer array
  */
-const mergeSortedArray = function(A, B) {
-  return A.concat(B).sort((a, b) => a - b);
+mergeSortedArray = (a, b) => {
+  return a.concat(a).sort((x, y) => x - y);
 };
+
+const a = [1, 2, 3, 4];
+const b = [2, 4, 5, 6];
+
+console.log(mergeSortedArray(a, b));

@@ -29,7 +29,7 @@
  * An empty array should be treated like a 0 in this problem.
  */
 
-function findEvenIndex(arr) {
+findEvenIndex = arr => {
   for (i = 1; i <= arr.length; i++) {
     let sumLeft = 0;
     let sumRight = 0;
@@ -44,7 +44,7 @@ function findEvenIndex(arr) {
     }
   }
   return -1;
-}
+};
 
 console.log(findEvenIndex([1, 2, 3, 4, 3, 2, 1]), 3);
 console.log(findEvenIndex([1, 100, 50, -51, 1, 1]), 1);

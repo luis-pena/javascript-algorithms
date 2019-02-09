@@ -6,15 +6,15 @@
 const myArr = [1, 2, 3, 4, 5, 4, 5, 6, 7, 40, 18, 91, 103, 48388, 365472, 0];
 
 // INDIVIDUAL ARRAY FILTERS, YOU CAN ADD AS MANY AS YOU LIKE!
-const getEvens = function(arr) {
+getEvens = arr => {
   return arr.filter(ele => ele % 2 === 0);
 };
 
-const stripTwos = function(arr) {
+stripTwos = arr => {
   return arr.filter(ele => ele != 2);
 };
 
-const stripFours = function(arr) {
+stripFours = arr => {
   return arr.filter(ele => ele != 4);
 };
 

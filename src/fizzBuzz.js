@@ -18,9 +18,9 @@
  * @param n: An integer
  * @return: A list of strings.
  */
-const fizzBuzz = function(n) {
+fizzBuzz = n => {
   let index = 1;
-  let response = [];
+  const response = [];
   while (index <= n) {
     if (index % 5 === 0 && index % 3 === 0) {
       response.push("fizz buzz");
@@ -33,3 +33,5 @@ const fizzBuzz = function(n) {
   }
   return response;
 };
+
+console.log(fizzBuzz(15));

@@ -10,7 +10,13 @@
  * @param nums: An array
  * @return: the Kth largest element
  */
-const kthLargestElement = function(n, nums) {
-  indexToReturn = nums.length - n;
+
+kthLargestElement = (n, nums) => {
+  const indexToReturn = nums.length - n;
   return nums.sort((a, b) => a - b)[indexToReturn];
 };
+
+const n = 3;
+const nums = [9, 3, 2, 4, 8];
+
+console.log(kthLargestElement(n, nums));

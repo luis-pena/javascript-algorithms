@@ -26,13 +26,13 @@
  * 19
  */
 
-function hourglassSum(arr) {
+hourglassSum = arr => {
   let maxSum;
-  for (let y = 0; y < arr.length - 2; y++) {
-    for (let x = 0; x < arr[y].length - 2; x++) {
+  for (y = 0; y < arr.length - 2; y++) {
+    for (x = 0; x < arr[y].length - 2; x++) {
       let sum = 0;
       sum += arr[y + 1][x + 1];
-      for (let i = x; i < x + 3; i++) {
+      for (i = x; i < x + 3; i++) {
         sum += arr[y][i];
         sum += arr[y + 2][i];
       }
@@ -44,13 +44,15 @@ function hourglassSum(arr) {
     }
   }
   return maxSum;
-}
-arr = [
-  [-1, 1, -1, 0, 0, 0],
-  [0, -1, 0, 0, 0, 0],
-  [-1, -1, -1, 0, 0, 0],
-  [0, -9, 2, -4, -4, 0],
-  [-7, 0, 0, -2, 0, 0],
-  [0, 0, -1, -2, -4, 0]
+};
+
+const arr = [
+  [1, 1, 1, 0, 0, 0],
+  [0, 1, 0, 0, 0, 0],
+  [1, 1, 1, 0, 0, 0],
+  [0, 0, 2, 4, 4, 0],
+  [0, 0, 0, 2, 0, 0],
+  [0, 0, 1, 2, 4, 0]
 ];
+
 console.log(hourglassSum(arr));

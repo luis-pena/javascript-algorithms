@@ -11,8 +11,7 @@
  * @param n: An integer
  * @return: An integer denote the count of digit k in 1..n
  */
-const digitCounts = function(k, n) {
-  let indexArray = [];
+digitCounts = (k, n) => {
   let kCounter = 0;
   for (let i = 0; i <= n; i++) {
     for (var digit of i.toString()) {
@@ -23,3 +22,5 @@ const digitCounts = function(k, n) {
   }
   return kCounter;
 };
+
+console.log(digitCounts(1, 12));

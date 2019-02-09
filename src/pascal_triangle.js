@@ -1,16 +1,16 @@
 const pascal = function(n) {
-  let triangle = [];
-  for (let y = 0; y < n; y++) {
+  const triangle = [];
+  for (y = 0; y < n; y++) {
     triangle.push(drawRow(y, triangle[y - 1]));
   }
   return triangle;
 };
 
 function drawRow(y, previousRow) {
-  row = [];
+  const row = [];
   // x being used as the index on the horizontal axis of the triangle
   // y being used as the index on the vertical axis of the triangle
-  for (let x = 0; x <= y; x++) {
+  for (x = 0; x <= y; x++) {
     if (x === 0 || x === y) {
       row.push(1);
     } else row.push(previousRow[x - 1] + previousRow[x]);
